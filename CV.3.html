@@ -6,64 +6,66 @@
         
         <title>John Jamison CV - 2018</title>
         
-        <!--[if IE]>
-            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="The CV of John Jamison - 2018">
         <meta name="author" content="John(Jack) Jamison">
         <meta charset="utf-8">
+
+        <!-- Normalize Stylesheet -->
+        <style>
+            /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+            html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+            /*# sourceMappingURL=normalize.min.css.map */
+        </style>
         
         <!-- Internal style sheet used create single sendable file -->
-        <style type="text/css">
+        <style>
+
             
-            /*///// html5 style reset /////*/
-            
-            article, aside, figure, footer, header, hgroup,
-            menu, nav, section { display: block; }
-            
-            * {
-                margin: 0;
-                padding: 0;
-            }
-            
-            
-            
-            /*///// Small Screen Styles /////*/
-            
-            p, h1, h2, ul {margin-bottom: 1.5rem;}
-            
-            a {color: black;}
-            a:hover {color: #ff7600;}
+            /************************************************************
+                SMALL SCREEN AND GENERAL STYLES
+            ************************************************************/
             
             body {
-                font-family: calibri, arial, helvetica, sans-serif;
+                font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
                 background: #fffefc;
                 font-size: 1.2em;
             }
             
-            strong, h1, h2 {color: #ff7600;}
+            #main_cont { 
+                margin-top: -2.5em;   
+            }
+            
+            .wrapper {
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 5em 1em 0;
+            }
+            
+            p, h1, h2, ul {
+                margin-bottom: 1.5em;
+            }
             
             h1 {
-                font-size: 2.5rem;
+                font-size: 2.5em;
+                margin: 0;
+            }
+            
+            strong, h1, h2 {
+                color: #ff7600;
+            }
+            
+            a {
+                color: black;
+            }
+            
+            a:hover {
+                color: #ff7600;
             }
             
             hr {
                 width: 70%;
-                margin: 0 auto;
-            }
-            
-            .wrapper {
-                max-width: 960px;
-                margin: 0 auto;
-                padding: 5rem 1rem 7rem;
-            }
-            
-            #main_cont {overflow: hidden;}
-            
-            #contact_cont {
-                margin: -0.6rem 2rem 0 0;
+                margin: 2em auto;
             }
             
             .lg_only {
@@ -71,35 +73,53 @@
                 }
             
             
-            
-            /*///// Nav Menu /////*/
+            /************************************************************
+                NAVIGATION (SMALL SCREEN)
+            ************************************************************/
             
             nav {
                 position: fixed;
                 top: 0;
-                background: #ff7600;
                 width: 100%;
-                cursor: pointer;
+                background: #ff7600;
             }
             
             nav h1 {
+                font-size: 2.5rem;
                 color: #fffefc;
                 margin-bottom: 0;
-                padding-left: 0.5rem;
+                padding-left: 0.5em;
+            }
+            
+            #menu-wrap {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                width: 8rem;
+                cursor: pointer;
+            }
+            
+            #menu-wrap:hover ul {
+                display: block;
             }
             
             nav ul {
                 display: none;
+                position: absolute;
+                top: 0.8rem;
+                right: 0;
+                height: 60rem;
+                padding: 0.8rem;
                 background: #1f0e00;
-                margin-bottom: 0.5rem;
-                width: 100%;
-                padding-left: 0.5rem;
-                font-size: 1.4rem;
+                text-align: right;
+                font-size: 2rem;
                 font-weight: bold;
             }
             
             nav li {
-                padding-bottom: 0.2rem;
+                padding-bottom: 1.5rem;
+                list-style-type: none;
             }
             
             nav a {
@@ -107,25 +127,19 @@
                 color: #fffefc;
             }
             
-            nav:hover ul {
-                display: inline-block;
-            }
-            
-            :target:before {
+            :target:before { /* Adjust location of anchor links with fixed header */
                 content: "";
                 display: block;
-                height: 11.5rem; /* fixed header height*/
-                margin: -11.5rem 0 0; /* negative fixed header height */
+                height: 3.5rem; /* fixed header height*/
+                margin-top: -3.5rem; /* negative fixed header height */
             }
             
-            
-            
-            /*///// Burger Menu /////*/
+            /*///// Burger Menu created with borders to avoid image or SVG dependencies /////*/
             
             .burger_menu {
-                display: inline-block; 
                 position: relative;
-                width: 2.5rem;
+                top: 2.2rem;
+                left: 5.2rem;
             }
             
             .burger_menu:before {
@@ -147,16 +161,34 @@
             }
             
             
-            
-            /*///// Styles for large screen /////*/
+            /************************************************************
+                STYLE FOR LARGE SCREENS
+            ************************************************************/
             
             @media only screen and (min-width: 800px) {
+                .wrapper {
+                    padding-top: 0;
+                    border-left: solid 1px #eee;
+                    border-right: solid 1px #eee;
+                }
+                
                 #contact_cont {
                     float: left;
+                    padding: 80px 1em 0 0;
+                }
+                
+                #main_cont {
+                    padding: 65px 1em;
+                    border-left: solid 1px #eee;
+                    overflow: hidden;
+                }
+                
+                section {
+                margin-bottom: 2em;
                 }
                 
                 h1 {
-                    font-size: 4rem;
+                    font-size: 4em;
                 }
                 
                 .sm_only {
@@ -166,87 +198,175 @@
                 .lg_only {
                     display: block;
                 }
-                
-                .wrapper {
-                    padding-top: 3rem;
-                }
-                
             }
-            
         </style>
-    
     </head>
     
-    <body>
+    
+    <!--***********************************************************
+        START OF BODY
+    ************************************************************-->
+    
+    <body id="page-top">
         
-            <nav class="sm_only">
-                <h1><span class="burger_menu"></span>JOHN JAMISON</h1>
+        
+        <!--***********************************************************
+                NAVIGATION (SMALL SCREEN)
+        ************************************************************-->
+        
+        <nav class="sm_only">
+            <h1>JOHN JAMISON</h1>
+            <div id="menu-wrap">
+            <div class="burger_menu"></div>
                 <ul>
-                    <a href="#experience"><li>Experience</li></a>
-                    <a href="#quals"><li>Qualifications</li></a>
-                    <a href="#volunteer"><li>Volunteer work</li></a>
-                    <a href="#contact"><li>Contact Details</li></a>
+                    <li><a href="#page-top">Technical Experience</a></li>
+                    <li><a href="#employment">Employment</a></li>
+                    <li><a href="#quals">Qualifications</a></li>
+                    <li><a href="#hobbies">Hobbies and Interests</a></li>
+                    <li><a href="#contact">Contact Details</a></li>
                 </ul>
-            </nav>
+            </div>
+        </nav>
         
-        <div class="wrapper" id="experience">
-        
-            <div id="contact_cont" class="lg_only">
-                <h1>JOHN<br>JAMISON</h1>
-                <section id="cont_details">
-                    <p><strong>DOB</strong><time datetime="1986-02-26"><br>26/02/1986</time></p>
-                    <p><strong>Tel</strong><br><a href="tel:00447506036823">07506036823</a></p>
-                    <p><strong>Email</strong><br><a href="mailto:jackofthejamison@hotmail.com">jackofthejamison@hotmail.com</a></p>
-                    <p><strong>Address</strong>
-                        <br>Flat 3
-                        <br>72 Rugby Place
-                        <br>Brighton
-                        <br>BN2 5JA
+        <div class="wrapper">
+            
+            
+            <!--***********************************************************
+                CONTACT (LARGE SCREEN)
+            ************************************************************-->
+            
+           <section id="contact_cont" class="lg_only">
+               <h1>
+                   JOHN
+                   <br />JAMISON
+               </h1>
+
+               <p>
+                   <strong>DOB</strong><time datetime="1986-02-26"><br>26/02/1986</time>
+               </p>
+
+               <p>
+                   <strong>Tel</strong>
+                   <br /><a href="tel:00447506036823">07506036823</a>
+               </p>
+               
+               <p>
+                   <strong>Email</strong>
+                   <br /><a href="mailto:jackofthejamison@hotmail.com">jackofthejamison@hotmail.com</a>
+               </p>
+               
+               <p>
+                   <strong>GitHub</strong>
+                   <br /><a href="https://github.com/jackjohnjamison/">github.com/jackjohnjamison</a>
+               </p>
+               
+               <p>
+                   <strong>linkedIn</strong>
+                   <br /><a href="https://www.linkedin.com/in/john-jamison-31200510a/">linkedin.com/in/<br />john-jamison-31200510a/</a>
+               </p>
+               
+               <p>
+                   <strong>Address</strong>
+                   <br />Flat 3
+                   <br />72 Rugby Place
+                   <br />Brighton
+                   <br />BN2 5JA
+               </p>
+            </section>
+            
+            <div id="main_cont">
+                
+                
+                <!--***********************************************************
+                    TECHNICAL EXPERIENCE
+                ************************************************************-->
+                
+                <section id="experience">
+                    <h2>Technical Experience</h2>
+                    
+                    <p>
+                        I have a longstanding passion for computers and technology, and have a great deal of experience using a number of common software programs including
                     </p>
+                    
+                    <ul>
+                        <li>Microsoft office suite including word, excel and outlook</li>
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe Flash</li>
+                        <li>Adobe Brackets (text based code editor)</li>
+                        <li>GitHub Desktop</li>
+                        <li>XAMPP (local server tool)</li>
+                        <li>Unity</li>
+                    </ul>
+                    
+                    <p>
+                        I also have a bread rang of experience coding including 
+                    </p>
+                    
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>PHP</li>
+                        <li>JavaScript</li>
+                        <li>C++</li>
+                        <li>AS3 for flash</li>
+                    </ul>
+                    <hr class="sm_only" />
                 </section>
                 
-            </div><!-- END #contact_cont -->
-
-            <div id="main_cont">
-                <section><h2>Experience</h2>
+                
+                <!--***********************************************************
+                    EMPLOYMENT
+                ************************************************************-->
+                
+                <section id="employment">
+                    <h2>Employment</h2>
                     <p>
                         <b>Smart Metering Field Operative and Mentor, EDF Energy</b>
-                        <br><i>Brighton UK 03/2017 - 11/2017</i>
-                        <br>The main duties of this role included the instillation, replacement, testing and inspection of varied electrical metering equipment. Utilizing a company vehicle I travelled to a wide variety of domestic and small business properties across Sussex and was required to give a high level of customer service both over the phone and in person. As a mentor I was also able to pass on my skills on a one to one basis to new starters in the field.
+                        <br /><i>Brighton UK 03/2017 - 11/2017</i>
+                        <br />The main duties of this role included the instillation, replacement, testing and inspection of varied electrical metering equipment. Utilizing a company vehicle I travelled to a wide variety of domestic and small business properties across Sussex and was required to give a high level of customer service, both over the phone and in person. As a mentor I was also able to pass on my skills on a one to one basis to new starters in the field.
                     </p>
-                    <span class="sm_only"><hr><br><br></span>
+                    <hr class="sm_only" />
+                    
                     <p>
                         <b>Night Manager, Brighton YHA</b>
-                        <br><i>Brighton UK 08/2016 - 03/2017</i>
-                        <br>As a night manager I am was for all the goings on of the hostel during the night time hours. It is a varied role that includes running the reception and bar, preparing the kitchen for service in the morning and any customer service problems which arose. Particular emphasis is put on the safeguarding of guests; as many were young and or vulnerable. I was also responsible for administrative duties such scheduling, parole and risk evaluations as well as responding to reviews on social media.
+                        <br /><i>Brighton UK 08/2016 - 03/2017</i>
+                        <br />As a night manager I was responsible for all the goings on of the hostel during the night time hours. It was a varied role which included running the reception and bar, preparing the kitchen for service in the morning, and any customer service problems which arose. Particular emphasis is put on the safeguarding of guests; as many were young and or vulnerable. I was also responsible for administrative duties such scheduling, payroll and risk evaluations as well as responding to reviews on social media.
                     </p>
-                    <span class="sm_only"><hr><br><br></span>
+                    <hr class="sm_only" />
+                    
                     <p>
                         <b>Telephone Interviewer, Ipsos Amsterdam</b>
-                        <br><i>Amsterdam NL 08/2015 - 04/2016</i>
-                        <br>In this position I conducted opinion polls and market research with respondents from The United Kingdom, Ireland, The United States and The Middle East to provide our clients with insights into key demographics. I have worked on a broad range of subjects researching political opinion and media consumption with the public as well as projects which focus on business and professionals with valuable perspectives.
+                        <br /><i>Amsterdam NL 08/2015 - 04/2016</i>
+                        <br />In this position I conducted opinion polls and market research with respondents from The United Kingdom, Ireland, The United States and The Middle East to provide our clients with insights into key demographics. I have worked on a broad range of subjects researching political opinion and media consumption with the public as well as projects which focus on business and professionals with valuable perspectives.
                     </p>
-                    <span class="sm_only"><hr><br><br></span>
+                    <hr class="sm_only" />
+                    
                     <p>
                         <b>Server Rocker (Head Waiter), Hardrock Café Amsterdam</b>
-                        <br><i>Amsterdam NL 03/2010 - 07/2015</i>
-                        <br>In my role as a server I balanced giving an excellent customer experience, professionalism and salesmanship practices within a high pressure environment. As a ‘rocker’ I also provided leadership and a point of communication between the management and the server department. In this supervisory role I organized duties, found solutions for operational challenges and resolved conflicts within the team in the busiest weekend and evening shifts.
+                        <br /><i>Amsterdam NL 03/2010 - 07/2015</i>
+                        <br />In my role as a server I balanced giving an excellent customer experience, professionalism and salesmanship practices within a high pressure environment. As a ‘rocker’ I also provided leadership and a point of communication between the management and the server department. In this supervisory role I organized duties, found solutions for operational challenges and resolved conflicts within the team in the busiest weekend and evening shifts.
                     </p>
-                    <span class="sm_only"><hr><br><br></span>
+                    <hr class="sm_only" />
+                    
                      <p>
                         <b>Assistant Manager, Millets Outdoor</b>
-                        <br><i>Canterbury UK 09/2007 - 02/2010</i>
-                        <br>As the most senior staff member on site I had responsibility for the day to day operational and administrative running of my location. One of my main roles was the setting of individual targets and the training and mentoring of colleges to assist them in reaching personal sales goals. I also organized store layout and merchandising rollouts maximize the impact of our marketing to our customers. Other administrative duties included the budgeting and scheduling of staff, cash handling and stock management.
+                        <br /><i>Canterbury UK 09/2007 - 02/2010</i>
+                        <br />As the most senior staff member on site I had responsibility for the day to day operational and administrative running of my location. One of my main roles was the setting of individual targets and the training and mentoring of colleges to assist them in reaching personal sales goals. I also organized store layout and merchandising rollouts maximize the impact of our marketing to our customers. Other administrative duties included the budgeting and scheduling of staff, cash handling and stock management.
                     </p>
-                    <span class="sm_only"><hr><br><br></span>
+                    <hr class="sm_only" />
+                    
                      <p>
                         <b>Gallery Manager, Canterbury Cathedral Shop</b>
-                        <br><i>Canterbury UK 12/2006 - 09/2007</i>
-                        <br>Within my employment here I worked in two capacities. My Main role was the running the Cathedral art gallery which included merchandising and selling or range of tapestries, prints and sculptures. My second role was in the Cathedral's stores, managing and storing stock for the gallery and gift shop. This involved the stock taking, replenishment and inventory.
+                        <br /><i>Canterbury UK 12/2006 - 09/2007</i>
+                        <br />Within my employment here I worked in two capacities. My Main role was the running the Cathedral art gallery which included merchandising and selling or range of tapestries, prints and sculptures. My second role was in the Cathedral's stores, managing and storing stock for the gallery and gift shop. This involved the stock taking, replenishment and inventory.
                     </p>
+                    <hr class="sm_only" />
                 </section>
 
-                <span class="sm_only"><hr><br><br></span>
+                
+                <!--***********************************************************
+                    QUALIFICATIONS
+                ************************************************************-->
                 
                 <section>
                     <h2 id="quals">Qualifications</h2>
@@ -255,35 +375,91 @@
                         <li>A levels in Film and Biology</li>
                         <li>Full Clean UK drivers license</li>
                     </ul>
+                    <p>I am currently taking a night course at Brighton MET which covers HTML, CSS and JavaScript as well as an online course in full stack web development with Udemy. I plan to take further courses with Udemy with greater focus of JavaScript applications and responsive web design and generally to make ongoing improvements to my skill base.</p>
+                    <hr class="sm_only" />
                 </section>
-
-                <span class="sm_only"><hr><br><br></span>
+                
+                
+                <!--***********************************************************
+                    HOBBIES AND INTERESTS
+                ************************************************************-->
                 
                 <section>
-                    <h2 id="volunteer">Volunteer work</h2>
-                    <p>I presently volunteer with the Woodland Tribe working with children and adults to build temporary adventure playgrounds. I have worked on numerous projects with them including Brighton Fringe Festival and Camp Bestival.</p>
-                    <p>Previously I have also volunteered with the Brighton Permaculture Trust and the Low Carbon Trust in Stanmer.</p>
+                    <h2 id="hobbies">Hobbies and Interests</h2>
+                    
+                    <p>
+                        In my free time I love learning new things and enjoy reading and following online tutorials. I presently volunteer with the Woodland Tribe working with children and adults to build temporary adventure playgrounds. I have worked on numerous projects with them including Brighton Fringe Festival and Camp Bestival. Previously I have also volunteered with the Brighton Permaculture Trust and the Low Carbon Trust in Stanmer.
+                    </p>
+                    
+                    <p>
+                        I also Enjoy hiking, cycling and in the summer months enjoy sea swimming and taking my kayak out on the water.
+                    </p>
+                    <hr class="sm_only" />
                 </section>
                 
-                <span class="sm_only"><hr><br><br></span>
+                
+                <!--***********************************************************
+                    CONTACT SMALL SCREEN
+                ************************************************************-->
                 
                 <section class="sm_only">
                     <h2 id="contact">Contact Details</h2>
-                    <p><strong>DOB</strong><time datetime="1986-02-26"><br>26/02/1986</time></p>
-                    <p><strong>Tel</strong><br><a href="tel:00447506036823">07506036823</a></p>
-                    <p><strong>Email</strong><br><a href="mailto:jackofthejamison@hotmail.com">jackofthejamison@hotmail.com</a></p>
-                    <p><strong>Address</strong>
-                        <br>Flat 3
-                        <br>72 Rugby Place
-                        <br>Brighton
-                        <br>BN2 5JA
+                    
+                    <p>
+                        <strong>DOB</strong><time datetime="1986-02-26"><br>26/02/1986</time>
                     </p>
-            </section>
-                
+                    
+                    <p>
+                        <strong>Tel</strong><br />
+                        <a href="tel:00447506036823">07506036823</a>
+                    </p>
+                    
+                    <p>
+                        <strong>Email</strong><br />
+                        <a href="mailto:jackofthejamison@hotmail.com">jackofthejamison@hotmail.com</a>
+                    </p>
+               
+                    <p>
+                       <strong>GitHub</strong>
+                       <br /><a href="https://github.com/jackjohnjamison/">github.com/jackjohnjamison</a>
+                    </p>
+                    
+                    <p>
+                       <strong>linkedIn</strong>
+                       <br /><a href="https://www.linkedin.com/in/john-jamison-31200510a/">linkedin.com/in/john-jamison-31200510a/</a>
+                    </p>
+                    
+                    <p>
+                        <strong>Address</strong>
+                        <br />Flat 3
+                        <br />72 Rugby Place
+                        <br />Brighton
+                        <br />BN2 5JA
+                    </p>
+                </section>
             </div><!-- END #main_cont -->
-            
         </div><!-- END wrapper -->
+            
         
-    </body>
+        <!--***********************************************************
+            POLYFILLS FOR IE < 9
+        ************************************************************-->
 
+        <!--[if lt IE 9]>
+            <script>
+                /**
+                * @preserve HTML5 Shiv 3.7.3 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
+                */
+                !function(a,b){function c(a,b){var c=a.createElement("p"),d=a.getElementsByTagName("head")[0]||a.documentElement;return c.innerHTML="x<style>"+b+"</style>",d.insertBefore(c.lastChild,d.firstChild)}function d(){var a=t.elements;return"string"==typeof a?a.split(" "):a}function e(a,b){var c=t.elements;"string"!=typeof c&&(c=c.join(" ")),"string"!=typeof a&&(a=a.join(" ")),t.elements=c+" "+a,j(b)}function f(a){var b=s[a[q]];return b||(b={},r++,a[q]=r,s[r]=b),b}function g(a,c,d){if(c||(c=b),l)return c.createElement(a);d||(d=f(c));var e;return e=d.cache[a]?d.cache[a].cloneNode():p.test(a)?(d.cache[a]=d.createElem(a)).cloneNode():d.createElem(a),!e.canHaveChildren||o.test(a)||e.tagUrn?e:d.frag.appendChild(e)}function h(a,c){if(a||(a=b),l)return a.createDocumentFragment();c=c||f(a);for(var e=c.frag.cloneNode(),g=0,h=d(),i=h.length;i>g;g++)e.createElement(h[g]);return e}function i(a,b){b.cache||(b.cache={},b.createElem=a.createElement,b.createFrag=a.createDocumentFragment,b.frag=b.createFrag()),a.createElement=function(c){return t.shivMethods?g(c,a,b):b.createElem(c)},a.createDocumentFragment=Function("h,f","return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&("+d().join().replace(/[\w\-:]+/g,function(a){return b.createElem(a),b.frag.createElement(a),'c("'+a+'")'})+");return n}")(t,b.frag)}function j(a){a||(a=b);var d=f(a);return!t.shivCSS||k||d.hasCSS||(d.hasCSS=!!c(a,"article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}template{display:none}")),l||i(a,d),a}var k,l,m="3.7.3",n=a.html5||{},o=/^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i,p=/^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i,q="_html5shiv",r=0,s={};!function(){try{var a=b.createElement("a");a.innerHTML="<xyz></xyz>",k="hidden"in a,l=1==a.childNodes.length||function(){b.createElement("a");var a=b.createDocumentFragment();return"undefined"==typeof a.cloneNode||"undefined"==typeof a.createDocumentFragment||"undefined"==typeof a.createElement}()}catch(c){k=!0,l=!0}}();var t={elements:n.elements||"abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output picture progress section summary template time video",version:m,shivCSS:n.shivCSS!==!1,supportsUnknownElements:l,shivMethods:n.shivMethods!==!1,type:"default",shivDocument:j,createElement:g,createDocumentFragment:h,addElements:e};a.html5=t,j(b),"object"==typeof module&&module.exports&&(module.exports=t)}("undefined"!=typeof window?window:this,document);
+            </script>
+
+            <script>
+                /*! Respond.js v1.4.2: min/max-width media query polyfill * Copyright 2013 Scott Jehl
+                 * Licensed under https://github.com/scottjehl/Respond/blob/master/LICENSE-MIT
+                 *  */
+
+                !function(a){"use strict";a.matchMedia=a.matchMedia||function(a){var b,c=a.documentElement,d=c.firstElementChild||c.firstChild,e=a.createElement("body"),f=a.createElement("div");return f.id="mq-test-1",f.style.cssText="position:absolute;top:-100em",e.style.background="none",e.appendChild(f),function(a){return f.innerHTML='&shy;<style media="'+a+'"> #mq-test-1 { width: 42px; }</style>',c.insertBefore(e,d),b=42===f.offsetWidth,c.removeChild(e),{matches:b,media:a}}}(a.document)}(this),function(a){"use strict";function b(){u(!0)}var c={};a.respond=c,c.update=function(){};var d=[],e=function(){var b=!1;try{b=new a.XMLHttpRequest}catch(c){b=new a.ActiveXObject("Microsoft.XMLHTTP")}return function(){return b}}(),f=function(a,b){var c=e();c&&(c.open("GET",a,!0),c.onreadystatechange=function(){4!==c.readyState||200!==c.status&&304!==c.status||b(c.responseText)},4!==c.readyState&&c.send(null))};if(c.ajax=f,c.queue=d,c.regex={media:/@media[^\{]+\{([^\{\}]*\{[^\}\{]*\})+/gi,keyframes:/@(?:\-(?:o|moz|webkit)\-)?keyframes[^\{]+\{(?:[^\{\}]*\{[^\}\{]*\})+[^\}]*\}/gi,urls:/(url\()['"]?([^\/\)'"][^:\)'"]+)['"]?(\))/g,findStyles:/@media *([^\{]+)\{([\S\s]+?)$/,only:/(only\s+)?([a-zA-Z]+)\s?/,minw:/\([\s]*min\-width\s*:[\s]*([\s]*[0-9\.]+)(px|em)[\s]*\)/,maxw:/\([\s]*max\-width\s*:[\s]*([\s]*[0-9\.]+)(px|em)[\s]*\)/},c.mediaQueriesSupported=a.matchMedia&&null!==a.matchMedia("only all")&&a.matchMedia("only all").matches,!c.mediaQueriesSupported){var g,h,i,j=a.document,k=j.documentElement,l=[],m=[],n=[],o={},p=30,q=j.getElementsByTagName("head")[0]||k,r=j.getElementsByTagName("base")[0],s=q.getElementsByTagName("link"),t=function(){var a,b=j.createElement("div"),c=j.body,d=k.style.fontSize,e=c&&c.style.fontSize,f=!1;return b.style.cssText="position:absolute;font-size:1em;width:1em",c||(c=f=j.createElement("body"),c.style.background="none"),k.style.fontSize="100%",c.style.fontSize="100%",c.appendChild(b),f&&k.insertBefore(c,k.firstChild),a=b.offsetWidth,f?k.removeChild(c):c.removeChild(b),k.style.fontSize=d,e&&(c.style.fontSize=e),a=i=parseFloat(a)},u=function(b){var c="clientWidth",d=k[c],e="CSS1Compat"===j.compatMode&&d||j.body[c]||d,f={},o=s[s.length-1],r=(new Date).getTime();if(b&&g&&p>r-g)return a.clearTimeout(h),h=a.setTimeout(u,p),void 0;g=r;for(var v in l)if(l.hasOwnProperty(v)){var w=l[v],x=w.minw,y=w.maxw,z=null===x,A=null===y,B="em";x&&(x=parseFloat(x)*(x.indexOf(B)>-1?i||t():1)),y&&(y=parseFloat(y)*(y.indexOf(B)>-1?i||t():1)),w.hasquery&&(z&&A||!(z||e>=x)||!(A||y>=e))||(f[w.media]||(f[w.media]=[]),f[w.media].push(m[w.rules]))}for(var C in n)n.hasOwnProperty(C)&&n[C]&&n[C].parentNode===q&&q.removeChild(n[C]);n.length=0;for(var D in f)if(f.hasOwnProperty(D)){var E=j.createElement("style"),F=f[D].join("\n");E.type="text/css",E.media=D,q.insertBefore(E,o.nextSibling),E.styleSheet?E.styleSheet.cssText=F:E.appendChild(j.createTextNode(F)),n.push(E)}},v=function(a,b,d){var e=a.replace(c.regex.keyframes,"").match(c.regex.media),f=e&&e.length||0;b=b.substring(0,b.lastIndexOf("/"));var g=function(a){return a.replace(c.regex.urls,"$1"+b+"$2$3")},h=!f&&d;b.length&&(b+="/"),h&&(f=1);for(var i=0;f>i;i++){var j,k,n,o;h?(j=d,m.push(g(a))):(j=e[i].match(c.regex.findStyles)&&RegExp.$1,m.push(RegExp.$2&&g(RegExp.$2))),n=j.split(","),o=n.length;for(var p=0;o>p;p++)k=n[p],l.push({media:k.split("(")[0].match(c.regex.only)&&RegExp.$2||"all",rules:m.length-1,hasquery:k.indexOf("(")>-1,minw:k.match(c.regex.minw)&&parseFloat(RegExp.$1)+(RegExp.$2||""),maxw:k.match(c.regex.maxw)&&parseFloat(RegExp.$1)+(RegExp.$2||"")})}u()},w=function(){if(d.length){var b=d.shift();f(b.href,function(c){v(c,b.href,b.media),o[b.href]=!0,a.setTimeout(function(){w()},0)})}},x=function(){for(var b=0;b<s.length;b++){var c=s[b],e=c.href,f=c.media,g=c.rel&&"stylesheet"===c.rel.toLowerCase();e&&g&&!o[e]&&(c.styleSheet&&c.styleSheet.rawCssText?(v(c.styleSheet.rawCssText,e,f),o[e]=!0):(!/^([a-zA-Z:]*\/\/)/.test(e)&&!r||e.replace(RegExp.$1,"").split("/")[0]===a.location.host)&&("//"===e.substring(0,2)&&(e=a.location.protocol+e),d.push({href:e,media:f})))}w()};x(),c.update=x,c.getEmValue=t,a.addEventListener?a.addEventListener("resize",b,!1):a.attachEvent&&a.attachEvent("onresize",b)}}(this);
+            </script>
+        <![endif]-->
+    </body>
 </html>
